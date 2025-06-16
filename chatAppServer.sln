@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chatAppServer.Webapi", "chatAppServer.Webapi\chatAppServer.Webapi.csproj", "{17395510-322D-4768-BF53-119583AE7BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17395510-322D-4768-BF53-119583AE7BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17395510-322D-4768-BF53-119583AE7BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17395510-322D-4768-BF53-119583AE7BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17395510-322D-4768-BF53-119583AE7BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2FED329-B715-4ECF-B77C-A69DA36F781C}
+	EndGlobalSection
+EndGlobal
