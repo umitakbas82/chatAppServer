@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using chatAppServer.Webapi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace chatAppServer.Webapi.Context
 {
@@ -8,5 +9,9 @@ namespace chatAppServer.Webapi.Context
         {
        
         }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet <Chat> Chats { get; set; }
+
     }
 }
