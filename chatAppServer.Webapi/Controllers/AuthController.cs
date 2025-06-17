@@ -2,7 +2,6 @@
 using chatAppServer.Webapi.Dtos;
 using chatAppServer.Webapi.Models;
 using GenericFileService.Files;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,7 +38,17 @@ namespace chatAppServer.Webapi.Controllers
 
 
 
+        [HttpPost]
+        public async Task<IActionResult>Login(string name, CancellationToken cancellationToken)
+        {
+            User? user = await context.Users.FirstOrDefaultAsync(p => p.Name == name, cancellationToken);
 
+            if (user is null)
+            {
+                return BadRequest(new { Message = "Kullanıcı Bulunamadı" });
+            }
+            return Ok(new { Message = "Giriş Başarılı" });
+        }
 
 
 
