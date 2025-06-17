@@ -1,4 +1,5 @@
 ﻿using chatAppServer.Webapi.Context;
+using chatAppServer.Webapi.Dtos;
 using chatAppServer.Webapi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,18 @@ namespace chatAppServer.Webapi.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage(SendMessageDto request, CancellationToken cancellationToken)
         {
+            Chat chat = new()
+            {
+                UserId = request.UserID,
+                ToUserId = request.ToUserId,
+                Message = request.Message,
+                Date = DateTime.Now
+            };
+            await context.AddAsync(chat, cancellationToken);
+            await context.SaveChangesAsync(cancellationToken);
+
+
+
             return Ok();
         }
     }
