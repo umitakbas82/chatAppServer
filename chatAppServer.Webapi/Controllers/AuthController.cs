@@ -46,8 +46,12 @@ namespace chatAppServer.Webapi.Controllers
             if (user is null)
             {
                 return BadRequest(new { Message = "Kullanıcı Bulunamadı" });
+
             }
-            return Ok(new { Message = "Giriş Başarılı" });
+
+            user.Status = "online";
+            await context.SaveChangesAsync(cancellationToken);
+            return Ok(user);
         }
 
 
