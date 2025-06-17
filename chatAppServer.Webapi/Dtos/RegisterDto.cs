@@ -1,6 +1,10 @@
 ﻿namespace chatAppServer.Webapi.Dtos
 {
-    public class RegisterDto
-    {
-    }
+    public sealed record RegisterDto(
+               
+        string Name,
+        IFormFile File
+        );
+    
+    
 }
